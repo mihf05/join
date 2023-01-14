@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/login.js"></script>
+    <script src="js/modules/includeHTML.js"></script>
+    <script src="js/help.js"></script>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/help.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>Help - Join</title>
+</head>
+
+<body onload="includeHTML(setupMenuUserDetails()); helpInit()">
+
+    <!--Menu-->
+    <div w3-include-html="./templates/menu.html"></div>
+    <article class="helpArticle">
+        <section class="helpHeader">
+            <h1>Help</h1>
+            <h5>Learning Management System Project</h5>
+        </section>
+        <section class="tab box">
+            <section class="helpButtons">
+                <button class="tablinks box active" onclick="openCategory(event, 'helpFirstSteps')">First Steps</button>
+                <button class="tablinks box" onclick="openCategory(event, 'helpAddTask')">1. Add Task</button>
+                <button class="tablinks box" onclick="openCategory(event, 'helpBacklog')">2. Backlog</button>
+                <button class="tablinks box" onclick="openCategory(event, 'helpBoard')">3. Board</button>
+                <button class="tablinks box" onclick="openCategory(event, 'helpImpressum');showGermanImprint()">Impressum</button>
+
+            </section>
+
+            <section>
+                <div id="helpFirstSteps" class="tabcontent">
+                    <br><br><br><br>
+                    <h3>First Steps</h3>
+                    <p>Welcome to the join page of: Nils Spiller, David Heckhoff and Sebastian Funke.<br>This is a project management tool to plan tasks and assign them to people.</p>
+                    <br><br><br><br><br>
+                </div>
+
+                <div id="helpAddTask" class="tabcontent">
+                    <h3>1. Add Task</h3>
+                    <img class="box" src="assets/helpImgs/addtask.PNG" alt="">
+                    <p>In the 'Addtask' Area you can add individual Tasks. <br> Enter Title, Category, Description, Due Date, Importance and assign the Task to a Person. <br> After all Fields have been filled in, the Task is created with the 'Create Task'
+                        Button.
+                    </p>
+                </div>
+
+                <div id="helpBacklog" class="tabcontent">
+                    <h3>2. Backlog</h3>
+                    <img class="box" src="assets/helpImgs/backlog.PNG" alt="">
+                    <p>The Tasks that have been created are clearly listed in the Backlog.<br> These Tasks have not yet started.<br>After clicking on the Task, it will be handed over to the Board.</p>
+                </div>
+
+                <div id="helpBoard" class="tabcontent">
+                    <h3>3. Board</h3>
+                    <img class="box" src="assets/helpImgs/board.PNG" alt="">
+                    <p>The Board consists of four Sections.<br> With the Mouse button pressed, each Task can be moved to a different Section.<br> Further Informations can be displayed by clicking on a Task.<br><br> In the 'todo' Section the Tasks that are
+                        to be processed next are listed.<br> If the Mouse is hovered over an Task in this Section, a Button appears that sends this Task back to the Backlog.<br><br> The 'in progress' Section lists Tasks that are currently being processed.<br><br>The
+                        'testing' Section lists Tasks that have been completed but are still being tested for completion.<br><br> The 'done' Section lists Tasks that have been successfully tested and thus fully processed.<br> In this Section a Button
+                        appears when hovering to permanently delete this Task.</p>
+                </div>
+
+                <div id="helpImpressum" class="tabcontent" style="position: relative;">
+                    <div class="languageIconWrap">
+                        <img id="languageIconEnglish" src="assets/britishFlag.png" alt="british flag" class="languageIcon" onclick="showEnglishImprint();toggleLanguageIcon()">
+                        <img id="languageIconGerman" src="assets/germanyFlag.png" alt="german flag" class="languageIcon languageIconActive" onclick="showGermanImprint();toggleLanguageIcon()">
+                    </div>
+
+                    <div id="imprintWrap">
+                    </div>
+
+                </div>
+
+
+
+            </section>
+        </section>
+    </article>
+</body>
+
+</html>

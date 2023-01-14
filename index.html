@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/login.js"></script>
+    <script src="js/modules/includeHTML.js"></script>
+    <script src="js/modules/helper.class.js"></script>
+    <script src="js/modules/mini_backend.js"></script>
+    <script src="js/modules/popUp.class.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/board.css">
+    <script src="js/board.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <script src="js/legend.js"></script>
+    <title>Board - Join</title>
+</head>
+
+<body onload="includeHTML(setupMenuUserDetails()), boardInit()">
+
+    <!--Menu-->
+    <div w3-include-html="./templates/menu.html"></div>
+
+    <div id="main" class="column">
+        <div w3-include-html="./templates/legendBox.html"></div>
+
+        <article class="boardArticle">
+
+            <section class="boardContainer">
+                <div class="boardColumn center column">
+                    <h3>TO DO</h3>
+                    <div id="BlockToDo" class="boardStatusBlock column box" ondrop="moveTo('to-do')"
+                        ondragover="allowDrop(event); addHighlight('BlockToDo')" ondragleave="removeHighlight()">
+                    </div>
+                </div>
+                <div class="boardColumn center column">
+                    <h3>IN PROGRESS</h3>
+                    <div id="BlockInProgress" class="boardStatusBlock column box " ondrop="moveTo('inProgress')"
+                        ondragover="allowDrop(event); addHighlight('BlockInProgress')" ondragleave="removeHighlight()">
+                    </div>
+                </div>
+                <div class="boardColumn center column">
+                    <h3>TESTING</h3>
+                    <div id="BlockTesting" class="boardStatusBlock column box " ondrop="moveTo('testing')"
+                        ondragover="allowDrop(event); addHighlight('BlockTesting')" ondragleave="removeHighlight()">
+                    </div>
+                </div>
+                <div class="boardColumn center column">
+                    <h3>DONE</h3>
+                    <div id="BlockDone" class="boardStatusBlock column box " ondrop="moveTo('done')"
+                        ondragover="allowDrop(event); addHighlight('BlockDone')" ondragleave="removeHighlight()">
+
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+</body>
+
+</html>

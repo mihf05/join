@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/login.js"></script>
+    <script src="js/modules/includeHTML.js"></script>
+    <script src="js/modules/helper.class.js"></script>
+    <script src="js/modules/mini_backend.js"></script>
+    <script src="js/modules/user.class.js"></script>
+    <script src="js/modules/popUp.class.js"></script>
+    <script src="js/backlog.js"></script>
+    <script src="js/legend.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/backlog.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>Backlog - Join</title>
+</head>
+
+<body onload="includeHTML(setupMenuUserDetails()); setup();">
+
+    <!--Menu-->
+    <div w3-include-html="./templates/menu.html"></div>
+
+    <!--Backlog Main Container-->
+    <div id="main-container" class="Column">
+        <h1>Backlog</h1>
+        <h5>Learning Management System Project</h5>
+
+        <!--Legend-->
+        <div w3-include-html="./templates/legendBox.html"></div>
+
+        <!--Categories-->
+        <div id="header-container" class="row">
+            <h3 id="assigned-to-header">Assigned To</h3>
+            <h3 id="due-date-header">Due Date</h3>
+            <h3 id="title-header">Title</h3>
+        </div>
+
+        <!--Entries-->
+        <div id="render-container">
+            <!--Render here-->
+        </div>
+
+    </div>
+
+</body>
+
+</html>
